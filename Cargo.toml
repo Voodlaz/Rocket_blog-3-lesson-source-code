@@ -1,0 +1,19 @@
+[package]
+name = "Prettycode_blog"
+version = "0.1.0"
+authors = ["Voodlaz <47495939+Voodlaz@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { git = "https://github.com/SergioBenitez/Rocket" }
+rocket_codegen = { git = "https://github.com/SergioBenitez/Rocket" }
+
+diesel = { version = "1.0.0", features = ["postgres"] }
+dotenv = "0.9.0"
+
+[dependencies.rocket_contrib]
+git  = "https://github.com/SergioBenitez/Rocket"
+default-features = false
+features = ["diesel_sqlite_pool", "serve", "handlebars_templates", "tera_templates"]
